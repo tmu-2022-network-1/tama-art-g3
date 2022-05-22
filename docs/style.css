@@ -1,0 +1,52 @@
+body {
+    height: 100%;
+}
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+
+.left-box {
+    left: 0;
+    background-color: aquamarine;
+}
+
+.left-box h3 {
+    text-align: center;
+}
+
+.right-box {
+    right: 0;
+    overflow-y: scroll;
+    background-color: bisque;
+}
+
+.right-box .images {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.right-box .images li {
+    width: 33%;
+    list-style: none;
+}
+
+img {
+    transition: 1.0s;
+}
+
+img:hover {
+    opacity: 0.5;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 960px) {
+    .split {
+        position: relative;
+        width: 100%;
+        height: auto;
+        /*高さはコンテンツ量に応じて*/
+    }
+}

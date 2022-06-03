@@ -20,7 +20,7 @@ body {
 .right-box {
     right: 0;
     overflow-y: scroll;
-    background-color: bisque;
+
 }
 
 .right-box .images {

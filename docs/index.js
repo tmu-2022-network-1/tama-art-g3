@@ -13,19 +13,44 @@ const getData = async () => {
 };
 
 const renderResponse = (res) => {
-    document.getElementById("response").value = JSON.stringify(res, null, 2);
+    //変なボックス削除
+    //document.getElementById("response").value = JSON.stringify(res, null, 2);
 
     document.getElementsByClassName(
         "split right-box"
-    )[0].innerHTML = `<ul id="venues"></ul>`;
+    )[0].innerHTML = `<ul id="venues" class="columns is-multiline is-gapless"></ul>`;  //is-multilineで折り返す、is-gaplessで余白無し
 
     const venues = document.getElementById("venues");
 
     for (const venue of res) {
+        const photo = venue.photo !== '' ? venue.photo : 'images/placeholder.png';
         const venueNode = document.createElement("li");
-        venueNode.innerHTML = `<h3>${venue.name}</h3>
-      <h4>${venue.address}<h4><h5>${venue.station}</h5>
-      <hr>`;
+        venueNode.className = 'column is-one-third';  //is-half=半分、is-one-third:1/3
+
+        venueNode.innerHTML = `
+        <div class = "card">
+          <div class = "card-image">
+            <figure class = "image is-one-third">
+              
+              <h3 class = subtitle is-6>
+              ${venue.name}
+              </h3>
+            </figure>
+          </div>
+
+          
+        
+          <div class = "content">
+          </div>
+
+          <a href = "#">
+            <figure class="image is-square is-one-quarter poster" style="background-image:url(${photo})">
+            </figure>
+          </a>
+        </div>
+        
+
+      </div>`;
         venues.appendChild(venueNode);
     }
 };

@@ -1,3 +1,5 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
 body {
     height: 100%;
 }
@@ -43,6 +45,12 @@ img:hover {
 
 li {
     list-style-type: none;
+    display: inline-block;
+}
+
+.image is-square is-one-quarter poster:hover {
+    opacity: 0.5;
+
 }
 
 /* レスポンシブデザイン */

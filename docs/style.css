@@ -25,6 +25,10 @@ body {
 
 }
 
+.split.right-box {
+    margin: auto;
+}
+
 .right-box .images {
     display: flex;
     flex-wrap: wrap;
@@ -53,10 +57,37 @@ li {
 
 }
 
+.image.is-square:hover {
+    opacity: 0.5;
+
+}
+
 .text-area {
     width: 100%;
     height: 30px;
 }
+
+.box {
+    position: relative;
+}
+
+.subtitle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.img-position {
+    /* 左ボックスの画像を中央表示 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 
@@ -151,6 +182,7 @@ body {
 }
 
 a {
+    /* 会場名の文字 */
     color: #485fc7;
     cursor: pointer;
     text-decoration: none
@@ -158,7 +190,8 @@ a {
 
 .image.is-1by1,
 .image.is-square {
-    padding-top: 100%
+    /* 画像の縦の長さ */
+    padding-top: 150%
 }
 
 .card {

@@ -4,6 +4,27 @@ body {
     height: 100%;
 }
 
+header {
+    /* background-color: orange; */
+}
+
+.logo {
+    padding: 13px;
+}
+
+.logo:hover {
+    opacity: 0.95;
+}
+
+footer {
+    /* background-color: orange; */
+}
+
+.footer-text {
+    text-align: center;
+    margin: 20px;
+}
+
 .split {
     position: absolute;
     width: 50%;
@@ -12,7 +33,7 @@ body {
 
 .left-box {
     left: 0;
-    background-color: antiquewhite;
+    background-color: lightgray;
 }
 
 .left-box h3 {

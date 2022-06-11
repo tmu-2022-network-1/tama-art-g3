@@ -1,51 +1,33 @@
 const getData = async () => {
-    const endpoint =
-        "https://script.google.com/macros/s/AKfycbxYb6A56yxS_gLG_AkWxMODItAzBrzYYT8CT3Yvxel3UlgNhau-sJnH1ZbFM-Ho_GcQkA/exec?sheet=group3";
-    try {
-        const response = await fetch(endpoint);
-        if (response.ok) {
-            const json = await response.json();
-            return json;
-        }
-    } catch (error) {
-        console.log(error);
+  const endpoint =
+    "https://script.googleusercontent.com/macros/echo?user_content_key=l7eaf9Pz5HsRoUnKGKSmmGpHJDHOxodUyfQpfS7F0iKKIpGX_CKIZ0SsYoM3LIVH7MsWAYyl510r-VO7YHE3shRKsEsi8xfkm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnEmHHJxhC_oe1Qmd2R-eXjoXgTxWUu4HYlJom6QacPSgNEmyKwSz32FPG-bn2sJSQBMlTA-c0F3yHHty0meKf-_VOxuX8xhGctz9Jw9Md8uu&lib=MabRb0sHcOdgcukW2MiMwBlocHvvcqee0";
+  try {
+    const response = await fetch(endpoint);
+    if (response.ok) {
+      const json = await response.json();
+      return json;
     }
+  } catch (error) {
+    console.log(error);
+  }
 };
 
-const renderResponse = (res) => {
-    //変なボックス削除
-    //document.getElementById("response").value = JSON.stringify(res, null, 2);
+// urlにパラメータ
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
 
-    document.getElementsByClassName(
-        "split right-box"
-    )[0].innerHTML = `<ul id="venues" class="columns is-multiline is-gapless"></ul>`;  //is-multilineで折り返す、is-gaplessで余白無し
+const renderResponse = (json) => {
 
-    const venues = document.getElementById("venues");
-
-    for (const venue of res.filter(d => d.name !== '')) {
-        const photo = venue.photo !== '' ? venue.photo : 'images/placeholder.png';
-        const venueNode = document.createElement("li");
-        venueNode.className = 'column is-one-third';  //is-half=半分、is-one-third:1/3
-
-        venueNode.innerHTML = `
-        <div class = "card">
-          <div class = "text-area">
-            <h3 class = subtitle is-6>
-              ${venue.name}
-            </h3>
-            <figure class = "image is-one-third">
-            </figure>
-          </div>
-          <div class = "content">
-          </div>
-          <a href = "#">
-            <figure class="image is-square is-one-quarter poster" style="background-image:url(${photo})">
-            </figure>
-          </a>
-        </div>
-        
-      </div>`;
-        venues.appendChild(venueNode);
+    for (const event of json.filter(d => d.id == id)) {
+		document.getElementById("content").innerHTML =`
+      <h1>${event.name}</h1>
+      <h2>${event.address}</h2>
+      <h2>${event.station}</h2>
+      <a>${event.access}</a>
+      <p>${event.closingDay}</p>
+      <p>${event.openingTime}</p>
+      <p>${event.telephone}</p>
+      `;
     }
 };
 

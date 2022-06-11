@@ -13,11 +13,16 @@ header {
 }
 
 .logo:hover {
-    opacity: 0.8;
+    opacity: 0.95;
 }
 
 footer {
-    background-color: orange;
+    /* background-color: orange; */
+}
+
+.footer-text {
+    text-align: center;
+    margin: 20px;
 }
 
 .split {

@@ -1,6 +1,6 @@
 const getData = async () => {
   const endpoint =
-    "https://script.google.com/macros/s/AKfycbxhZ4ww0rLhp6A72xu4HznL5g-cA6BqosnggI2xlzzqrQKqVbq2HTLZO8MpdnaIkZLG_Q/exec?sheet=group3";
+    "https://script.googleusercontent.com/macros/echo?user_content_key=l7eaf9Pz5HsRoUnKGKSmmGpHJDHOxodUyfQpfS7F0iKKIpGX_CKIZ0SsYoM3LIVH7MsWAYyl510r-VO7YHE3shRKsEsi8xfkm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnEmHHJxhC_oe1Qmd2R-eXjoXgTxWUu4HYlJom6QacPSgNEmyKwSz32FPG-bn2sJSQBMlTA-c0F3yHHty0meKf-_VOxuX8xhGctz9Jw9Md8uu&lib=MabRb0sHcOdgcukW2MiMwBlocHvvcqee0";
   try {
     const response = await fetch(endpoint);
     if (response.ok) {
@@ -12,74 +12,23 @@ const getData = async () => {
   }
 };
 
-
-
 // urlにパラメータ
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
+const renderResponse = (json) => {
 
-
-
-const renderEventList = (json) => {
-  document.getElementById("content").innerHTML =
-    `<ul id="events" class="columns is-multiline"></ul>`;
-
-  const events = document.getElementById("events");
-  for (const event of json.filter(d => d.name !== '')) {
-    const startDate = DateTime.fromJSDate(new Date(event.startDate));
-    const endDate = DateTime.fromJSDate(new Date(event.endDate));
-    const thumbnail = event.thumbnail !== '' ? event.thumbnail : '../images/placeholder.png';
-    const item = document.createElement("li");
-    item.className = 'column is-one-quarter';
-    item.innerHTML = `
-      <div class="card">
-      <div class="card-content">
-          <h3 class="title is-5">
-            <a href="event/?id=${event.id}">${event.title}</a>
-          </h3>
-          <div class="content">
-          ${event.venue}
-          <div>
-          <div class="content is-small">
-            ${startDate.setLocale('ja').toFormat('yyyy.MM.dd')} -
-            ${endDate.setLocale('ja').toFormat('yyyy.MM.dd')}
-          </div>
-          <a href="event/?id=${event.id}" class="event-link">
-            <figure class="image is-square is-one-quarter poster" style="background-image:url(${thumbnail})">
-            </figure>
-          </a>
-        </div>
-      </div>`;
-    events.appendChild(item);
-  }
-}
-
-const renderEvent = (json) => {
-  console.dir(json);
-  if (!id) {  //もしidがなかったら
-    renderEventList(json);
-    const eventLinks = document.querySelectorAll('.event-link');
-    for (const eventLink of eventLinks) {
-      eventLink.onmouseover = (e) => {
-        document.querySelector('.preview').style.backgroundImage = e.target.style.backgroundImage;
-      };
-    }
-    return;
-  }
-
-  //個別のイベントを表示
-  const event = json.find((d) => d.id === id);  //idが完全に一致していたら
-  if (event) {
-    document.title = `${event.title} | tama.potari`;
-    document.getElementById("content").innerHTML = `
-      <h1>${event.event1}</h1>
-      <h1>${event.openingTime}</h1>
-      <h1>${event.station}</h1>
-
-      
+    for (const event of json.filter(d => d.id == id)) {
+		document.getElementById("content").innerHTML =`
+      <h1>${event.name}</h1>
+      <h2>${event.address}</h2>
+      <h2>${event.station}</h2>
+      <a>${event.access}</a>
+      <p>${event.closingDay}</p>
+      <p>${event.openingTime}</p>
+      <p>${event.telephone}</p>
       `;
-  }
+    }
 };
 
-getData('events').then((json) => renderEvent(json));
+getData().then((json) => renderResponse(json));

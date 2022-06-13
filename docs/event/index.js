@@ -22,7 +22,6 @@ const renderResponse = (json) => {
     for (const event of json.filter(d => d.id == id)) {
 		document.getElementById("content").innerHTML =`
       <h1>${event.name}</h1>
-      <a>${event.thumbnail}</a>
       <a>住所： ${event.address}</a>
       <a>最寄駅： ${event.station}</a>
       <a>${event.access}</a>

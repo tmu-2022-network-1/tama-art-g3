@@ -5,6 +5,11 @@ body{
 
 img{
     text-align: left;
+    color: #fff;
+  background: #444;
+  line-height: 1;
+  border-radius: 50px;
+  transition: all .2s;
 }
 
 h1{

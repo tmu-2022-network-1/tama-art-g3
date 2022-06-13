@@ -64,6 +64,11 @@ img {
     transition: 1.0s;
 }
 
+/* img {
+    padding: 5px;
+    border: 9px solid green;
+} */
+
 img:hover {
     opacity: 0.5;
 }
@@ -73,8 +78,14 @@ li {
     display: inline-block;
 }
 
+/* .image is-square is-one-quarter poster{
+    padding: 5px;
+    border: 9px solid green;
+} */
+
 .image is-square is-one-quarter poster:hover {
     opacity: 0.5;
+
 
 }
 

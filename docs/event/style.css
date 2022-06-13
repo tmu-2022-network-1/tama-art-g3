@@ -1,14 +1,13 @@
 body{
     background-color: rgb(255, 255, 247);
-    text-align: center;
 }
 
 img{
   position: absolute;
   top: 20px;
   left:20px;
-
 }
+
 img:hover{  
     color: rgb(151, 151, 151);
     background: #444;
@@ -18,4 +17,11 @@ img:hover{
 
 h1{
     font-size: 40px;
+    color: #FFFFFF;
+    text-align: center;
+    background-color: black;
+}
+
+footer{
+    text-align: center;
 }

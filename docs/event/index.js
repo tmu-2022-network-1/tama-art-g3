@@ -21,8 +21,8 @@ const renderResponse = (json) => {
     for (const event of json.filter(d => d.id == id)) {
 		document.getElementById("content").innerHTML =`
       <h1>${event.name}</h1>
-      <h2>${event.address}</h2>
-      <h2>${event.station}</h2>
+      <a>${event.address}</a>
+      <a>${event.station}</a>
       <a>${event.access}</a>
       <p>${event.closingDay}</p>
       <p>${event.openingTime}</p>

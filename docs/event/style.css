@@ -9,7 +9,7 @@ img{
   left:20px;
 
 }
-.img:hover{  
+img:hover{  
     color: rgb(151, 151, 151);
     background: #444;
     line-height: 1;

@@ -8,12 +8,11 @@ img{
   left:20px;
 }
 
-.logo img{
+.logo img {
     transition: .3s ease-in-out;
-}
-
-.logo:hover img{
-    filter: sepia(100%);
+  }
+.logo:hover img {
+    filter: grayscale(100%);
   }
 
 h1{

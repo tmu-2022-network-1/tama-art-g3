@@ -34,7 +34,7 @@ const renderResponse = (res) => {
             <div class = "box">
 
                 <a href="event/?id=${venue.id}" class="event-link">
-                <figure class="image is-square is-one-quarter poster" style="background-image:url("images/${venue.id}.png")>
+                <figure class="image is-square is-one-quarter poster" style="background-image:url('images/${venue.id}.png')">
                 </figure>
                 </a>
 

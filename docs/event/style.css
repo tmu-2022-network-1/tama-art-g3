@@ -12,7 +12,7 @@ img{
     transition: .3s ease-in-out;
   }
 .logo:hover img {
-    filter: grayscale(100%);
+    filter: grayscale(50%);
   }
 
 h1{

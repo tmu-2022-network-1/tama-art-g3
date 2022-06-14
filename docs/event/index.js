@@ -24,7 +24,7 @@ const renderResponse = (json) => {
       <h1>${event.name}</h1>
       <p>住所： ${event.address}</p>
       <p>最寄駅： ${event.station}</p>
-      <p>${event.access}</p>
+      <p>アクセス： ${event.access}</p>
       <p>休館日： ${event.closingDay}</p>
       <p>開館時間： ${event.openingTime}</p>
       <p>電話番号： ${event.telephone}</p>

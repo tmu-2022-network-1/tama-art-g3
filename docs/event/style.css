@@ -1,17 +1,15 @@
 body{
-    background-color: rgb(255, 255, 247);
+    background-color: rgb(255,255,247);
 }
 
-img{
+.logo{
   position: fixed;
   top: 20px;
   left:20px;
+  transition: .3s ease-in-out;
 }
 
-.logo img {
-    transition: .3s ease-in-out;
-  }
-.logo:hover img {
+.logo:hover {
     filter: grayscale(50%);
   }
 

@@ -1,12 +1,14 @@
 body{
-    background-color: rgb(255,255,247);
+    background-color: #000000 ;
+    color: #FFFFFF ;
+    font-family: serif;
 }
 
 .logo{
   position: fixed;
   top: 20px;
   left:20px;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .logo:hover {
@@ -17,11 +19,11 @@ h1{
     font-size: 40px;
     color: #FFFFFF;
     text-align: center;
-    background-color: black;
+    font-family: serif;
 }
 
 footer{
     text-align: center;
     color: #FFFFFF;
-    background-color: black;
+    font-family: serif;
 }

@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(255,255,247);
+}
+
+.logo{
+  position: fixed;
+  top: 20px;
+  left:20px;
+}
+
+.logo img {
+    transition: .3s ease-in-out;
+  }
+.logo:hover img {
+    filter: grayscale(50%);
+  }
+
+h1{
+    font-size: 40px;
+    color: #FFFFFF;
+    text-align: center;
+    background-color: black;
+}
+
+footer{
+    text-align: center;
+    color: #FFFFFF;
+    background-color: black;
+}

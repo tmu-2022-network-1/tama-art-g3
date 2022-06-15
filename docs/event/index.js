@@ -35,7 +35,7 @@ const renderResponse = (json) => {
       <br>休館日： ${event.closingDay}
       <br>開館時間： ${event.openingTime}
       <br>電話番号： ${event.telephone}
-      <br><a href = "${event.url}">ホームページ</a></p>
+      <br><div class = "homepage"><a href = "${event.url}">ホームページ</a></div></p>
       </div>
       `;
     }

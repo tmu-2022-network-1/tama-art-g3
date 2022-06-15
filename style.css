@@ -6,12 +6,10 @@ body{
   position: fixed;
   top: 20px;
   left:20px;
+  transition: .3s ease-in-out;
 }
 
-.logo img {
-    transition: .3s ease-in-out;
-  }
-.logo:hover img {
+.logo:hover {
     filter: grayscale(50%);
   }
 

@@ -27,7 +27,7 @@ const renderResponse = (json) => {
 		document.getElementById("content").innerHTML =`
       <div style="margin: 30px auto; text-align:center; display: block;">
       <h1>${event.venue}</h1>
-      <p><img src = "${event.thumbnail}" width = "300"></p>
+      <p><div class = "thumbnail"><img src = "${event.thumbnail}" width = "300"></div></p>
       <p style="text-align: left; display: inline-block; padding: 20px;">
       <br>住所： ${event.address}
       <br>最寄駅： ${event.station}

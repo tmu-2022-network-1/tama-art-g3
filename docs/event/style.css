@@ -28,7 +28,7 @@ footer{
     font-family: serif;
 }
 
-.homepage{
+.homepage:link{
     color: #FFFFFF;
     font-family: serif;
 }

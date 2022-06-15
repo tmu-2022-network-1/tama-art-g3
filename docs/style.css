@@ -9,15 +9,15 @@ header {
 }
 
 .logo {
-    padding: 13px;
+    padding: 20px;
 }
 
 .logo:hover {
     opacity: 0.95;
 }
 
-footer {
-    /* background-color: orange; */
+.footer-text {
+    color: #fff;
 }
 
 .footer-text {
@@ -33,7 +33,7 @@ footer {
 
 .left-box {
     left: 0;
-    background-color: lightgray;
+    background-color: black;
 }
 
 .left-box h3 {
@@ -113,15 +113,143 @@ li {
     text-overflow: ellipsis;
 }
 
-.img-position {
-    /* 左ボックスの画像を中央表示 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
+@keyframes change-img-anim-first {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    36% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes change-img-anim {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    36% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 
 
+.album {
+    margin: auto;
+    background-color: black;
+    position: relative;
+}
+
+.album img {
+    width: 50%;
+    animation-name: album;
+    -webkit-animation-name: album;
+    animation-duration: 25s;
+    -webkit-animation-duration: 25s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+.album .img1 {
+    display: block;
+    margin: 0 auto;
+}
+
+.album .img2 {
+    animation-delay: 5s;
+    -webkit-animation-delay: 5s;
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+
+.album .img3 {
+    animation-delay: 10s;
+    -webkit-animation-delay: 10s;
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+
+.album .img4 {
+    animation-delay: 15s;
+    -webkit-animation-delay: 15s;
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+
+.album .img5 {
+    animation-delay: 20s;
+    -webkit-animation-delay: 20s;
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+
+@keyframes album {
+    0% {
+        opacity: 0;
+    }
+
+    12.5% {
+        opacity: 1;
+    }
+
+    37.5% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes album {
+    0% {
+        opacity: 0;
+    }
+
+    12.5% {
+        opacity: 1;
+    }
+
+    37.5% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
 
 blockquote,
 body,
@@ -182,7 +310,7 @@ html {
 }
 
 html {
-    background-color: #fff;
+    background-color: black;
     font-size: 16px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -192,18 +320,11 @@ html {
     text-rendering: optimizeLegibility;
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
-    text-size-adjust: 100%
+    text-size-adjust: 100%;
+    font-family: serif;
 }
 
 
-body,
-button,
-input,
-optgroup,
-select,
-textarea {
-    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
-}
 
 
 body {

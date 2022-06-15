@@ -29,14 +29,13 @@ const renderResponse = (json) => {
       <h1>${event.venue}</h1>
       <p><img src = "${event.thumbnail}" width = "300"></p>
       <p style="text-align: left; display: inline-block; padding: 20px;">
-      <p>住所： ${event.address}</p>
-      <p>最寄駅： ${event.station}</p>
-      <p>アクセス： ${event.access}</p>
-      <p>休館日： ${event.closingDay}</p>
-      <p>開館時間： ${event.openingTime}</p>
-      <p>電話番号： ${event.telephone}</p>
-      <p><a href = "${event.url}">ホームページ</a></p>
-      </p>
+      <br>住所： ${event.address}
+      <br>最寄駅： ${event.station}
+      <br>アクセス： ${event.access}
+      <br>休館日： ${event.closingDay}
+      <br>開館時間： ${event.openingTime}
+      <br>電話番号： ${event.telephone}
+      <br><a href = "${event.url}">ホームページ</a></p>
       </div>
       `;
     }

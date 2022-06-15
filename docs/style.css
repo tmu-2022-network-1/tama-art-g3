@@ -18,6 +18,7 @@ header {
 
 .footer-text {
     color: #fff;
+    font-size: 16px;
 }
 
 .footer-text {
@@ -61,37 +62,21 @@ header {
 }
 
 img {
-    transition: 1.0s;
+    transition: 2.0s;
 }
 
-/* img {
-    padding: 5px;
-    border: 9px solid green;
-} */
-
-img:hover {
+/* img:hover {
     opacity: 0.5;
-}
+} */
 
 li {
     list-style-type: none;
     display: inline-block;
 }
 
-/* .image is-square is-one-quarter poster{
-    padding: 5px;
-    border: 9px solid green;
-} */
-
-.image is-square is-one-quarter poster:hover {
-    opacity: 0.5;
-
-
-}
-
 .image.is-square:hover {
     opacity: 0.5;
-
+    transition: all 0.8s ease;
 }
 
 .text-area {
@@ -106,12 +91,30 @@ li {
 .subtitle {
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 0px;
+    font-size: 12px;
 
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    background: rgba(0, 0, 0, 1);
+    opacity: 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+
 }
+
+figure.hover-parent {
+    overflow: hidden;
+}
+
+figure.hover-parent:hover .subtitle {
+    opacity: 1;
+    transition: all 0.8s ease;
+}
+
+
+
 
 
 
@@ -250,6 +253,9 @@ li {
         opacity: 0;
     }
 }
+
+
+
 
 blockquote,
 body,

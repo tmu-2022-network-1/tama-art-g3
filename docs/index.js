@@ -32,15 +32,20 @@ const renderResponse = (res) => {
            
 
             <div class = "box">
-
+                
                 <a href="event/?id=${venue.id}" class="event-link">
-                <figure class="image is-square is-one-quarter poster" style="background-image:url('images/${venue.id}.png')">
-                </figure>
+                
+                <figure class="hover-parent">
+                    <figure class="image is-square is-one-quarter poster" style="background-image:url('images/${venue.id}.png')" style="border:black">
+                    </figure>
+                
                 </a>
-
-                <h3 class = "subtitle">
-                    ${venue.name}
-                </h3>
+                
+                
+                    <div class = "subtitle">
+                        ${venue.name}
+                    </div>
+                
                 </a>
             <div>
         </div>`;

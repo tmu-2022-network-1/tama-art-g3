@@ -1,19 +1,5 @@
 import { getData } from "./modules/getdata.js";
 
-// const getData = async () => {
-//     const endpoint =
-//         "https://script.google.com/macros/s/AKfycbxhZ4ww0rLhp6A72xu4HznL5g-cA6BqosnggI2xlzzqrQKqVbq2HTLZO8MpdnaIkZLG_Q/exec?sheet=group3";
-//     try {
-//         const response = await fetch(endpoint);
-//         if (response.ok) {
-//             const json = await response.json();
-//             return json;
-//         }
-//     } catch (error) {
-//         console.log(error);
-//     }
-// };
-
 const renderResponse = (res) => {
     document.getElementsByClassName(
         "split right-box"
@@ -22,30 +8,19 @@ const renderResponse = (res) => {
     const venues = document.getElementById("venues");
 
     for (const venue of res.filter(d => d.name !== '')) {
-        // const photo = venue.photo !== '' ? venue.photo : 'images/dummy_3.jpeg';
-        //const photo = group3.find(d => d.id == venue.id)?.photo || 'images/dummy_3.jpeg';
         const venueNode = document.createElement("li");
         venueNode.className = 'column is-one-third';  //is-half=半分、is-one-third:1/3
-
         venueNode.innerHTML = `
         <div class = "card">
-           
-
-            <div class = "box">
-                
-                <a href="event/?id=${venue.id}" class="event-link">
-                
-                <figure class="hover-parent">
-                    <figure class="image is-square is-one-quarter poster" style="background-image:url('images/${venue.id}.png')" style="border:black">
+            <div class = "box">  
+                <a href="event/?id=${venue.id}" class="event-link">    
+                    <figure class="hover-parent">
+                        <figure class="image is-square is-one-quarter poster" style="background-image:url('images/${venue.id}.png')" style="border:black">
                     </figure>
-                
                 </a>
-                
-                
-                    <div class = "subtitle">
+                <div class = "subtitle">
                         ${venue.name}
-                    </div>
-                
+                </div>            
                 </a>
             <div>
         </div>`;

@@ -28,7 +28,7 @@ footer{
     font-family: serif;
 }
 
-.homepage{
+.homepage:link{
     color: #FFFFFF;
     font-family: serif;
 }
@@ -40,3 +40,16 @@ footer{
 .homepage:active{
     color: blueviolet;
 }
+
+.thumbnail.fadein.is-animated {
+    animation: fadeIn 0.7s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+  }
+   
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

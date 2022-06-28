@@ -15,7 +15,7 @@ const renderResponse = (res) => {
             <div class = "box">  
                 <a href="event/?id=${venue.id}" class="event-link">    
                     <figure class="hover-parent">
-                        <figure class="image is-square is-one-quarter poster" style="background-image:url('images/${venue.id}.png')" style="border:black">
+                        <figure class="image is-square is-one-quarter poster" style="background-image:url('images/${venue.id}.png'); background-repeat: no-repeat; background-size: 100% auto"  style="border:black">
                     </figure>
                 </a>
                 <div class = "subtitle">

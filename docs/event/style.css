@@ -1,55 +1,56 @@
-body{
-    background-color: #000000 ;
-    color: #FFFFFF ;
-    font-family: serif;
+body {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: serif;
 }
 
-.logo{
+.logo {
   position: fixed;
   top: 20px;
-  left:20px;
+  left: 20px;
   transition: 0.3s;
 }
 
 .logo:hover {
-    filter: grayscale(50%);
-  }
-
-h1{
-    font-size: 40px;
-    color: #FFFFFF;
-    text-align: center;
-    font-family: serif;
+  filter: grayscale(50%);
 }
 
-footer{
-    text-align: center;
-    color: #FFFFFF;
-    font-family: serif;
+h1 {
+  font-size: 40px;
+  color: #FFFFFF;
+  text-align: center;
+  font-family: serif;
 }
 
-.homepage:link{
-    color: #FFFFFF;
-    font-family: serif;
+footer {
+  text-align: center;
+  color: #FFFFFF;
+  font-family: serif;
 }
 
-.homepage:hover{
-    color:#FFFF00
+.homepage:link {
+  color: #FFFFFF;
+  font-family: serif;
 }
 
-.homepage:active{
-    color: blueviolet;
+.homepage:hover {
+  color: #FFFF00
+}
+
+.homepage:active {
+  color: blueviolet;
 }
 
 .thumbnail.fadein.is-animated {
-    animation: fadeIn 0.7s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+  animation: fadeIn 0.7s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-   
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+
+  100% {
+    opacity: 1;
   }
+}
